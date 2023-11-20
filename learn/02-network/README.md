@@ -1,4 +1,5 @@
 # Lab Network
+1. Create Kind cluster from kind/lab-network/service-lab.yaml
 ## apply lab cluster
 1. apply kind from kind-lab-network
 2. create namespace app-dev
@@ -51,3 +52,13 @@ $ curl http://backend-service.app-dev
 kubectl delete -f clusterip.yaml -n app-dev
 ```
 
+# Ingress
+delete kind cluster and create new cluster from kind/lab-network/ingress-lab.yaml
+## Ingress with host
+```
+kubectl apply -f ingress-1.yaml
+```
+## Ingress with path
+```
+kubectl apply -f ingress-2.yaml
+```
