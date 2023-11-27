@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+  labels:
+    app: app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      containers:
+      - name: app
+        image: goupin008/flask-print-env
+        ports:
+        - containerPort: 5000
+        env:
+        - name: DB_HOST
+          value: "eiei.com"
+        - name: DB_USER
+          value: admin
+        - name: DB_PASS
+          value: "kormadikub"
+        - name: DB_NAME
+          value: app1
