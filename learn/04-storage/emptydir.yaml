@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      volumes:
+        - name: shared-data
+          emptyDir: {}
+      initContainers:
+        - name: init-container
+          image: busybox
+          command: ['sh', '-c', 'echo initializing > /data/test']
+          volumeMounts:
+            - name: shared-data
+              mountPath: /data
+      containers:
+        - name: main-container
+          image: nginx
+          volumeMounts:
+            - name: shared-data
+              mountPath: /usr/share/nginx/html

@@ -25,9 +25,16 @@ spec:
         - name: DB_USER
           value: admin
         - name: DB_PASS
-          value: "kormadikub"
-        - name: DB_NAME
-          value: app1
+          valueFrom:
+            secretKeyRef:
+              name: app-secret
+              key: db_pass
+        
+          
+        envFrom:
+        - configMapRef:
+            name: test-config
+
         
         
         

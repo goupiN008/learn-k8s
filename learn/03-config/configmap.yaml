@@ -4,8 +4,9 @@ metadata:
   name: test-config
 data:
   # property-like keys; each key maps to a simple value
-  app_test_name: "apppppp"
-  ui_properties_file_name: "user-interface.properties"
+  DB_PASS: "apppppp"
+  DB_PASS: "appp"
+  DB_HOST: "user-interface.properties"
 
   # file-like keys
   game.properties: |
