@@ -5,7 +5,6 @@ metadata:
 data:
   # property-like keys; each key maps to a simple value
   DB_PASS: "apppppp"
-  DB_PASS: "appp"
   DB_HOST: "user-interface.properties"
 
   # file-like keys
