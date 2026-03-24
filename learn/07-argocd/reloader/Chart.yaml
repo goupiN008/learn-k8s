@@ -1,0 +1,11 @@
+# https://github.com/stakater/Reloader/blob/master/deployments/kubernetes/chart/reloader
+apiVersion: v2
+name: reloader
+description:  A Helm chart used to customize the reloader Helm chart
+type: application
+version: 1.0.0
+
+dependencies:
+  - name: reloader
+    version: 3.12.1
+    repository: "https://stakater.github.io/stakater-charts/"
