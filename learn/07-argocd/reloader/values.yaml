@@ -1,17 +1,16 @@
 reloader:
-  reloader:
 
-    enableHA: true
-    replicas: 2
+  enableHA: true
+  replicas: 2
 
-    watchGlobally: true
-    deployment:
-      resources:
-        limits:
-          cpu: 200m
-          memory: 200Mi
-        requests:
-          cpu: 50m
-          memory: 50Mi
-        
+  watchGlobally: true
+  deployment:
+    resources:
+      limits:
+        cpu: 200m
+        memory: 200Mi
+      requests:
+        cpu: 50m
+        memory: 50Mi
+      
   
