@@ -1,5 +1,9 @@
 reloader:
   reloader:
+
+    enableHA: true
+    replicas: 2t
+
     watchGlobally: true
     deployment:
       resources:
