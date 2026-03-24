@@ -1,16 +1,21 @@
 reloader:
+  image:
+    name: stakater/reloader
+    repository: ghcr.io/stakater/reloader
+    tag: v1.4.14
+  
+  reloader:
+    enableHA: true
 
-  enableHA: true
-  replicas: 2
-
-  watchGlobally: true
-  deployment:
-    resources:
-      limits:
-        cpu: 200m
-        memory: 200Mi
-      requests:
-        cpu: 50m
-        memory: 50Mi
+    watchGlobally: true
+    deployment:
+      replicas: 2
+      resources:
+        limits:
+          cpu: 200m
+          memory: 200Mi
+        requests:
+          cpu: 50m
+          memory: 50Mi
       
   
